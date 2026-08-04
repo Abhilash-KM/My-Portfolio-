@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Abhilash KM | Software Engineering Portfolio</title>
+    <!-- Google Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Geist:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+    <!-- Anti-FOUC: apply saved/system theme before first paint -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'dark' || (!saved && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+</head>
+
+<body class="selection:bg-primary/20 bg-background text-on-surface">
+
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-[30px] border-b border-outline-variant/30">
+        <nav class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-20">
+            <div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Abhilash KM</div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-margin-md">
+                <a class="nav-link font-label-md text-label-md text-primary font-bold relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 after:bg-primary after:rounded-full transition-all duration-200"
+                    href="#home" id="nav-home">Home</a>
+                <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="#about" id="nav-about">About</a>
+                <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="#projects" id="nav-projects">Projects</a>
+                <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="#skills" id="nav-skills">Skills</a>
+                <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="#contact" id="nav-contact">Contact</a>
+            </div>
+
+            <!-- Theme Toggle & Action Buttons -->
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle"
+                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors"
+                    title="Toggle Color Mode">
+                    <span id="theme-icon"
+                        class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">light_mode</span>
+                </button>
+                <a href="#contact"
+                    class="hidden md:block bg-primary text-on-primary hover:bg-primary/90 px-6 py-2.5 font-label-md text-label-md font-bold active:scale-95 transition-all rounded-xl shadow-lg shadow-primary/20">
+                    Hire Me
+                </a>
+                <!-- Mobile Hamburger Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                    <span class="material-symbols-outlined text-on-surface">menu</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden border-t border-outline-variant/30 bg-background/95 backdrop-blur-[20px] px-6 py-4 flex flex-col gap-4">
+            <a class="mobile-nav-link font-label-md text-label-md text-primary font-bold" href="#home">Home</a>
+            <a class="mobile-nav-link font-label-md text-label-md text-on-surface-variant" href="#about">About</a>
+            <a class="mobile-nav-link font-label-md text-label-md text-on-surface-variant" href="#projects">Projects</a>
+            <a class="mobile-nav-link font-label-md text-label-md text-on-surface-variant" href="#skills">Skills</a>
+            <a class="mobile-nav-link font-label-md text-label-md text-on-surface-variant" href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="min-h-[calc(100vh-80px)] flex items-center px-gutter max-w-container-max mx-auto py-margin-lg"
+            id="home">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full -z-10">
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-margin-lg items-center w-full">
+                <div class="lg:col-span-7 space-y-margin-md">
+                    <div class="space-y-4">
+                        <span
+                            class="font-label-md text-label-md text-primary uppercase tracking-widest block reveal active">
+                            Engineering Student | Problem Solver | Tech Enthusiast
+                        </span>
+                        <h1
+                            class="font-display text-[48px] md:text-display text-on-surface reveal active leading-tight font-extrabold tracking-tight">
+                            Creative <br />
+                            <span class="text-primary typing-cursor text-glow" id="typing-text"></span>
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl reveal active"
+                            style="transition-delay: 200ms;">
+                            Aspiring AI/ML Engineer passionate about creating intelligent applications with clean code,
+                            problem-solving, collaboration, and continuous learning.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4 pt-4 reveal active" style="transition-delay: 400ms;">
+                        <a href="#projects"
+                            class="bg-primary text-on-primary px-8 py-4 font-label-md text-label-md font-bold hover:shadow-[0_8px_30px_rgba(59,130,246,0.3)] transition-all active:scale-95 rounded-xl block text-center">
+                            View Projects
+                        </a>
+                        <a href="#contact"
+                            class="border border-outline-variant/50 hover:bg-surface-container-low px-8 py-4 font-label-md text-label-md font-bold text-on-surface transition-all active:scale-95 rounded-xl block text-center">
+                            Contact Me
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-margin-sm pt-8 reveal active" style="transition-delay: 600ms;">
+                        <div class="flex -space-x-4">
+                            <div class="w-10 h-10 rounded-full border-2 border-background bg-surface-container flex items-center justify-center"
+                                title="Python">
+                                <span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full border-2 border-background bg-surface-container flex items-center justify-center"
+                                title="Java">
+                                <span class="material-symbols-outlined text-[18px] text-primary">coffee</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full border-2 border-background bg-surface-container flex items-center justify-center"
+                                title="JavaScript">
+                                <span class="material-symbols-outlined text-[18px] text-primary">code</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full border-2 border-background bg-surface-container flex items-center justify-center"
+                                title="Databases">
+                                <span class="material-symbols-outlined text-[18px] text-primary">database</span>
+                            </div>
+                        </div>
+                        <p class="font-label-md text-label-md text-on-surface-variant">Tech Stack: Java, Python, AI/ML,
+                            and SQL</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center lg:justify-end reveal active"
+                    style="transition-delay: 300ms;">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-4 bg-primary/10 blur-2xl rounded-full group-hover:bg-primary/15 transition-all duration-700">
+                        </div>
+                        <div
+                            class="bg-surface-container-low border border-outline-variant/30 w-[300px] md:w-[380px] h-[420px] md:h-[500px] overflow-hidden relative rotate-2 group-hover:rotate-0 transition-transform duration-500 rounded-xl shadow-2xl">
+                            <!-- Profile Photo -->
+                            <img src="profile-photo.png" alt="Abhilash KM"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background via-background/90 to-transparent">
+                                <p class="font-code text-code text-primary font-semibold">B.Tech CS &amp; IT Student |
+                                    Future AI/ML Engineer</p>
+                                <p class="font-headline-md text-headline-md font-bold text-on-surface">ABHILASH KM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-margin-md px-gutter max-w-container-max mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-gutter reveal">
+                <div class="glass-card p-margin-sm rounded-xl text-center space-y-2 group">
+                    <span
+                        class="font-display text-[40px] md:text-[48px] text-primary block group-hover:scale-110 transition-transform font-bold">4+</span>
+                    <span class="font-label-md text-label-md text-on-surface-variant font-semibold">Projects
+                        Built</span>
+                </div>
+                <div class="glass-card p-margin-sm rounded-xl text-center space-y-2 group">
+                    <span
+                        class="font-display text-[40px] md:text-[48px] text-primary block group-hover:scale-110 transition-transform font-bold">5+</span>
+                    <span
+                        class="font-label-md text-label-md text-on-surface-variant font-semibold">Certifications</span>
+                </div>
+
+                <div class="glass-card p-margin-sm rounded-xl text-center space-y-2 group">
+                    <span
+                        class="font-display text-[40px] md:text-[48px] text-primary block group-hover:scale-110 transition-transform font-bold">10+</span>
+                    <span class="font-label-md text-label-md text-on-surface-variant font-semibold">Tools Learned</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-margin-lg border-t border-outline-variant/10">
+            <div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-margin-lg items-center">
+                <div class="space-y-margin-sm">
+                    <div
+                        class="inline-block px-3 py-1 bg-primary/10 border border-primary/20 text-primary font-label-md text-label-md mb-margin-sm rounded-lg">
+                        CS &amp; IT STUDENT
+                    </div>
+                    <h2 class="font-display text-[36px] md:text-headline-lg font-bold text-on-surface leading-tight">
+                        About <span class="text-primary">Me</span>
+                    </h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Computer Science and Information Technology student with practical knowledge of Python, Java,
+                        HTML, CSS, Object Oriented Programming, AI/ML, Cybersecurity fundamentals, and UI/UX design.
+                        Adaptable to new technologies, eager to learn new things, and
+                        skilled at using AI tools efficiently to improve productivity and strong problem-solving skills.
+                    </p>
+                    <div class="flex gap-6 pt-margin-sm">
+                        <div class="flex flex-col">
+                            <span class="font-headline-md text-primary font-bold">2027</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant">Exp. Grad</span>
+                        </div>
+                        <div class="w-px h-12 bg-outline-variant/30"></div>
+                        <div class="flex flex-col">
+                            <span class="font-headline-md text-primary font-bold">90%</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant">Class 12</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/10 blur-3xl opacity-20 group-hover:opacity-40 transition-opacity">
+                    </div>
+                    <div
+                        class="relative w-full aspect-video md:aspect-square bg-gradient-to-tr from-primary/10 to-surface-container-high border border-outline-variant/30 rounded-xl overflow-hidden shadow-lg flex items-center justify-center p-8">
+                        <div class="text-center space-y-4">
+                            <span
+                                class="material-symbols-outlined text-[64px] text-primary/80 animate-bounce">school</span>
+                            <h3 class="font-headline-md text-on-surface">Education &amp; Growth</h3>
+                            <p class="text-xs text-on-surface-variant font-mono">Reva University, Bengaluru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Timeline -->
+            <div class="max-w-container-max mx-auto px-gutter py-margin-lg relative mt-12">
+                <div class="text-center mb-margin-lg">
+                    <h3 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-2">Education</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">My educational foundation and growth
+                    </p>
+                </div>
+
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] timeline-line"></div>
+
+                    <!-- Milestone 1: University -->
+                    <div class="relative flex flex-col md:flex-row justify-between items-center w-full mb-12 md:mb-16">
+                        <div class="w-full md:w-5/12 hidden md:block"></div>
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background timeline-dot z-10 shadow-sm">
+                        </div>
+                        <div class="w-full md:w-5/12 glass-card p-6 relative rounded-xl">
+                            <span class="font-code text-label-md text-primary font-bold mb-2 block">2023 — 2027</span>
+                            <h4 class="font-headline-md text-headline-md mb-2 text-on-surface font-bold">B.Tech in CS
+                                &amp; IT</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-4">Reva University.
+                                Specialized focus on building robust software systems and exploring emerging
+                                technologies.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2.5 py-1 bg-surface-container-high border border-outline-variant/30 text-[10px] font-code text-on-surface-variant rounded">Java</span>
+                                <span
+                                    class="px-2.5 py-1 bg-surface-container-high border border-outline-variant/30 text-[10px] font-code text-on-surface-variant rounded">Python</span>
+                                <span
+                                    class="px-2.5 py-1 bg-surface-container-high border border-outline-variant/30 text-[10px] font-code text-on-surface-variant rounded">AI/ML</span>
+                                <span
+                                    class="px-2.5 py-1 bg-surface-container-high border border-outline-variant/30 text-[10px] font-code text-on-surface-variant rounded">Data
+                                    Structures</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2: PU College -->
+                    <div
+                        class="relative flex flex-col md:flex-row justify-between items-center w-full mb-12 md:mb-16 flex-row-reverse">
+                        <div class="w-full md:w-5/12 hidden md:block"></div>
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background timeline-dot z-10 shadow-sm">
+                        </div>
+                        <div class="w-full md:w-5/12 glass-card p-6 relative rounded-xl">
+                            <span class="font-code text-label-md text-primary font-bold mb-2 block">2021 — 2023</span>
+                            <h4 class="font-headline-md text-headline-md mb-2 text-on-surface font-bold">Class 12
+                                (Pre-University)</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-4">Sree Vijaya PU College.
+                                Achieved a distinction score of 89.86% in science stream with PCMB focus.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2.5 py-1 bg-surface-container-high border border-outline-variant/30 text-[10px] font-code text-on-surface-variant rounded">Mathematics</span>
+                                <span
+                                    class="px-2.5 py-1 bg-surface-container-high border border-outline-variant/30 text-[10px] font-code text-on-surface-variant rounded">Physics</span>
+                                <span
+                                    class="px-2.5 py-1 bg-surface-container-high border border-outline-variant/30 text-[10px] font-code text-on-surface-variant rounded">Chemistry</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3: High School -->
+                    <div class="relative flex flex-col md:flex-row justify-between items-center w-full">
+                        <div class="w-full md:w-5/12 hidden md:block"></div>
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-outline-variant border-4 border-background timeline-dot z-10 shadow-sm">
+                        </div>
+                        <div class="w-full md:w-5/12 glass-card p-6 relative rounded-xl">
+                            <span class="font-code text-label-md text-primary font-bold mb-2 block">2011 — 2021</span>
+                            <h4 class="font-headline-md text-headline-md mb-2 text-on-surface font-bold">Class 10
+                                (Schooling)</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-4">Sri Byraveshwara
+                                Vidyanikethana School. Graduated with 84.83%, developing early interest in computing.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2.5 py-1 bg-surface-container-high border border-outline-variant/30 text-[10px] font-code text-on-surface-variant rounded">Foundations</span>
+                                <span
+                                    class="px-2.5 py-1 bg-surface-container-high border border-outline-variant/30 text-[10px] font-code text-on-surface-variant rounded">Science</span>
+                                <span
+                                    class="px-2.5 py-1 bg-surface-container-high border border-outline-variant/30 text-[10px] font-code text-on-surface-variant rounded">Logical
+                                    Reasoning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Goals Bento -->
+            <div class="max-w-container-max mx-auto px-gutter py-margin-lg">
+                <h3 class="font-headline-lg text-headline-lg font-bold mb-margin-md text-center text-on-surface">My
+                    Goals</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- UI Goal -->
+                    <div class="glass-card p-8 col-span-1 md:col-span-2 overflow-hidden relative rounded-xl">
+                        <div class="flex flex-col h-full relative z-10">
+                            <span class="material-symbols-outlined text-primary text-4xl mb-4">devices</span>
+                            <h4 class="font-headline-md text-headline-md font-bold mb-3 text-on-surface">Building
+                                User-Centric Software</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                                Passionate about creating seamless user experiences by blending technical efficiency
+                                with modern UI/UX principles. My goal is to develop applications that are as functional
+                                as they are beautiful.
+                            </p>
+                        </div>
+                        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+                    </div>
+
+                    <!-- AI & Cyber Goal -->
+                    <div class="glass-card p-8 rounded-xl">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">security</span>
+                        <h4 class="font-headline-md text-headline-md font-bold mb-3 text-on-surface">Mastering AI &amp;
+                            Cyber</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Deepening expertise in Cybersecurity to build safe digital environments and leveraging AI to
+                            automate complex problem-solving workflows.
+                        </p>
+                    </div>
+
+                    <!-- Problem Solving -->
+                    <div class="glass-card p-8 rounded-xl">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">psychology</span>
+                        <h4 class="font-headline-md text-headline-md font-bold mb-3 text-on-surface">Productive AI
+                            Integration</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Focusing on practical AI tools to boost developer productivity and solve real-world
+                            challenges through intelligent code.
+                        </p>
+                    </div>
+
+                    <!-- Technical Proficiency (Full Width Skill Highlight) -->
+                    <div
+                        class="glass-card p-8 col-span-1 md:col-span-2 bg-gradient-to-br from-surface-container-low to-surface-container rounded-xl border border-outline-variant/20">
+                        <div class="flex flex-col sm:flex-row items-start gap-margin-sm">
+                            <div class="bg-primary/10 p-4 rounded-lg shrink-0">
+                                <span class="material-symbols-outlined text-primary text-4xl">terminal</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline-md text-headline-md font-bold mb-2 text-on-surface">Technical
+                                    Proficiency Summary</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Strong foundation in Python, Java, AI/ML, Datastructures and algorithms. I believe
+                                    in writing clean, scalable code
+                                    while staying adaptable to the rapidly evolving tech landscape at Reva University.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-margin-lg border-t border-outline-variant/10 bg-surface-container-lowest/20">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <!-- Header & Filters -->
+                <header class="mb-margin-lg flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                    <div>
+                        <span
+                            class="inline-block px-3 py-1 bg-primary/10 border border-primary/20 text-primary font-label-md text-label-md mb-3 rounded-lg">
+                            PORTFOLIO SHOWCASE
+                        </span>
+                        <h2 class="font-display text-[36px] md:text-headline-lg font-bold text-on-surface mb-2">
+                            Projects
+                        </h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                            A selection of engineering projects by ABHILASH KM, focusing on AI, Machine Learning, and
+                            Software development.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2.5">
+                        <button
+                            class="project-filter-btn px-5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold transition-all shadow-md"
+                            data-filter="all">All Projects</button>
+                        <button
+                            class="project-filter-btn px-5 py-2 rounded-full border border-outline-variant/40 hover:bg-surface-container-high font-label-md text-label-md font-bold transition-all text-on-surface-variant"
+                            data-filter="python">Python</button>
+                        <button
+                            class="project-filter-btn px-5 py-2 rounded-full border border-outline-variant/40 hover:bg-surface-container-high font-label-md text-label-md font-bold transition-all text-on-surface-variant"
+                            data-filter="LLM">LLM's</button>
+                        <button
+                            class="project-filter-btn px-5 py-2 rounded-full border border-outline-variant/40 hover:bg-surface-container-high font-label-md text-label-md font-bold transition-all text-on-surface-variant"
+                            data-filter="ml">ML's</button>
+                        <button
+                            class="project-filter-btn px-5 py-2 rounded-full border border-outline-variant/40 hover:bg-surface-container-high font-label-md text-label-md font-bold transition-all text-on-surface-variant"
+                            data-filter="web">Websites</button>
+                    </div>
+                </header>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+                    <!-- SmartHire AI -->
+                    <article class="project-card glass-card rounded-xl overflow-hidden flex flex-col h-full"
+                        data-tags="python,ai">
+                        <div
+                            class="h-48 bg-gradient-to-br from-primary/10 to-surface-container flex items-center justify-center p-6 border-b border-outline-variant/20 relative">
+                            <span class="material-symbols-outlined text-[64px] text-primary/70">psychology_alt</span>
+                            <span
+                                class="absolute top-4 right-4 bg-primary-container text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">AI
+                                Portal</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-headline-md font-bold mb-2 text-on-surface">SmartHire AI
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">
+                                Intelligent HR Management System featuring AI-powered portals and deep interview
+                                analysis using Gemini AI.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Python</span>
+                                <span
+                                    class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Flask</span>
+                                <span
+                                    class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Gemini
+                                    AI</span>
+                            </div>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex items-start gap-2 text-on-surface-variant text-sm">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                    Automated sentiment &amp; skill analysis.
+                                </li>
+                                <li class="flex items-start gap-2 text-on-surface-variant text-sm">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                    Dual HR and Employee portals.
+                                </li>
+                            </ul>
+                            <div
+                                class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/20">
+                                <a class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface hover:text-primary transition-colors"
+                                    href="https://github.com/Abhilash-KM" target="_blank">
+                                    <span class="material-symbols-outlined text-lg">code</span> GitHub
+                                </a>
+                                <a class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface hover:text-primary transition-colors"
+                                    href="#contact">
+                                    <span class="material-symbols-outlined text-lg">open_in_new</span> Request Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cognitive Drift Detector -->
+                    <article class="project-card glass-card rounded-xl overflow-hidden flex flex-col h-full"
+                        data-tags="python,ai">
+                        <div
+                            class="h-48 bg-gradient-to-br from-primary/10 to-surface-container flex items-center justify-center p-6 border-b border-outline-variant/20 relative">
+                            <span class="material-symbols-outlined text-[64px] text-primary/70">monitoring</span>
+                            <span
+                                class="absolute top-4 right-4 bg-primary-container text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">Data
+                                Science</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-headline-md font-bold mb-2 text-on-surface">Cognitive Drift
+                                Detector</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">
+                                Machine Learning tool for analyzing complex reasoning patterns using transformer-based
+                                embeddings.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">PyTorch</span>
+                                <span
+                                    class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Python</span>
+                                <span
+                                    class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Streamlit</span>
+                            </div>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex items-start gap-2 text-on-surface-variant text-sm">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                    Real-time reasoning visualization.
+                                </li>
+                                <li class="flex items-start gap-2 text-on-surface-variant text-sm">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                    High-dimensional embedding analysis.
+                                </li>
+                            </ul>
+                            <div
+                                class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/20">
+                                <a class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface hover:text-primary transition-colors"
+                                    href="https://github.com/Abhilash-KM/Cognitive-Drift-Detector.git" target="_blank">
+                                    <span class="material-symbols-outlined text-lg">code</span> GitHub
+                                </a>
+                                <a class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface hover:text-primary transition-colors"
+                                    href="#contact">
+                                    <span class="material-symbols-outlined text-lg">open_in_new</span> Request Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- AgriPulse -->
+                    <article class="project-card glass-card rounded-xl overflow-hidden flex flex-col h-full"
+                        data-tags="node">
+                        <div
+                            class="h-48 bg-gradient-to-br from-primary/10 to-surface-container flex items-center justify-center p-6 border-b border-outline-variant/20 relative">
+                            <span class="material-symbols-outlined text-[64px] text-primary/70">potted_plant</span>
+                            <span
+                                class="absolute top-4 right-4 bg-primary-container text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">Web
+                                App</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-headline-md font-bold mb-2 text-on-surface">AgriPulse</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">
+                                Comprehensive agricultural monitoring and farm management app with integrated disease
+                                diagnosis workflows.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Node.js</span>
+                                <span
+                                    class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Express</span>
+                                <span
+                                    class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">REST
+                                    API</span>
+                            </div>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex items-start gap-2 text-on-surface-variant text-sm">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                    Automated disease identification.
+                                </li>
+                                <li class="flex items-start gap-2 text-on-surface-variant text-sm">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                    Resource tracking for farmers.
+                                </li>
+                            </ul>
+                            <div
+                                class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/20">
+                                <a class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface hover:text-primary transition-colors"
+                                    href="https://github.com/Abhilash-KM" target="_blank">
+                                    <span class="material-symbols-outlined text-lg">code</span> GitHub
+                                </a>
+                                <a class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface hover:text-primary transition-colors"
+                                    href="#contact">
+                                    <span class="material-symbols-outlined text-lg">open_in_new</span> Request Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- SecuX Cybersecurity Intelligence Platform -->
+                    <article
+                        class="project-card glass-card rounded-xl overflow-hidden flex flex-col h-full lg:col-span-2"
+                        data-tags="LLM">
+                        <div class="grid grid-cols-1 md:grid-cols-2 flex-grow">
+                            <div
+                                class="bg-gradient-to-br from-primary/15 to-surface-container flex items-center justify-center p-8 border-b md:border-b-0 md:border-r border-outline-variant/20 relative">
+                                <span
+                                    class="material-symbols-outlined text-[96px] text-primary/70 animate-pulse">security</span>
+                                <span
+                                    class="absolute top-4 left-4 bg-primary-container text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">Featured
+                                    Project</span>
+                            </div>
+                            <div class="p-8 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-headline-md text-headline-md font-bold text-on-surface">SecuX
+                                            Platform</h3>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                                        Cybersecurity Intelligence Platform utilizing LLM APIs and specialized agents
+                                        for advanced network audit and vulnerability analysis.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span
+                                            class="font-code text-code px-3 py-1 bg-surface-container rounded text-primary font-medium">Python</span>
+                                        <span
+                                            class="font-code text-code px-3 py-1 bg-surface-container rounded text-primary font-medium">React</span>
+                                        <span
+                                            class="font-code text-code px-3 py-1 bg-surface-container rounded text-primary font-medium">LLM
+                                            APIs</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4 mb-6">
+                                        <div class="flex items-center gap-3">
+                                            <span class="material-symbols-outlined text-primary text-2xl">shield</span>
+                                            <div>
+                                                <div
+                                                    class="text-[10px] uppercase text-on-surface-variant font-semibold">
+                                                    Security</div>
+                                                <div class="text-xs font-bold text-on-surface">Audit Agents</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-2xl">analytics</span>
+                                            <div>
+                                                <div
+                                                    class="text-[10px] uppercase text-on-surface-variant font-semibold">
+                                                    Analysis</div>
+                                                <div class="text-xs font-bold text-on-surface">Real-time Insights</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+                                    <a class="bg-primary text-on-primary font-label-md px-6 py-2.5 rounded-lg hover:shadow-[0_4px_15px_rgba(59,130,246,0.3)] transition-all font-semibold"
+                                        href="https://github.com/Abhilash-KM/SecuX" target="_blank">
+                                        GitHub Repo
+                                    </a>
+                                    <a class="border border-outline-variant/40 text-on-surface font-label-md px-6 py-2.5 rounded-lg hover:bg-surface-container transition-all font-semibold"
+                                        href="#contact">
+                                        Request Access
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Healthcare Data Analytics for Disease Trends -->
+                    <article
+                        class="project-card glass-card rounded-xl overflow-hidden flex flex-col h-full lg:col-span-3"
+                        data-tags="python,ml">
+                        <div class="grid grid-cols-1 md:grid-cols-2 flex-grow">
+                            <div
+                                class="bg-gradient-to-br from-primary/15 to-surface-container flex items-center justify-center p-8 border-b md:border-b-0 md:border-r border-outline-variant/20 relative">
+                                <span class="material-symbols-outlined text-[96px] text-primary/70">monitor_heart</span>
+                                <span
+                                    class="absolute top-4 left-4 bg-primary-container text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase">Big
+                                    Data</span>
+                            </div>
+                            <div class="p-8 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">
+                                        Healthcare Data Analytics
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                                        Analyzed 100,000+ patient records using PySpark to uncover disease spread
+                                        patterns, regional trends, and seasonal healthcare insights from a realistic
+                                        synthetic hospital dataset.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mb-5">
+                                        <span
+                                            class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">PySpark</span>
+                                        <span
+                                            class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Pandas</span>
+                                        <span
+                                            class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Matplotlib</span>
+                                        <span
+                                            class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Seaborn</span>
+                                        <span
+                                            class="font-code text-code px-2 py-1 bg-surface-container rounded text-primary font-medium">Jupyter</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-3 mb-5">
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-primary text-lg">dataset</span>
+                                            <div>
+                                                <div
+                                                    class="text-[10px] uppercase text-on-surface-variant font-semibold">
+                                                    Dataset</div>
+                                                <div class="text-xs font-bold text-on-surface">100K Records</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-lg">bar_chart</span>
+                                            <div>
+                                                <div
+                                                    class="text-[10px] uppercase text-on-surface-variant font-semibold">
+                                                    Analysis</div>
+                                                <div class="text-xs font-bold text-on-surface">Disease Trends</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="mb-5 space-y-1.5">
+                                        <li class="flex items-start gap-2 text-on-surface-variant text-sm">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                                            Regional disease spread & seasonal trend analysis.
+                                        </li>
+                                        <li class="flex items-start gap-2 text-on-surface-variant text-sm">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                                            Auto-generates 100K-row dataset if none found.
+                                        </li>
+                                        <li class="flex items-start gap-2 text-on-surface-variant text-sm">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                                            PySpark SQL for scalable big data querying.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+                                    <a class="bg-primary text-on-primary font-label-md px-6 py-2.5 rounded-lg hover:shadow-[0_4px_15px_rgba(59,130,246,0.3)] transition-all font-semibold"
+                                        href="https://github.com/Abhilash-KM/Health-Care-Data-Analytics-for-Disease-Trends.git"
+                                        target="_blank">
+                                        GitHub Repo
+                                    </a>
+                                    <a class="border border-outline-variant/40 text-on-surface font-label-md px-6 py-2.5 rounded-lg hover:bg-surface-container transition-all font-semibold"
+                                        href="#contact">
+                                        Request Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Certifications Section -->
+        <section id="skills" class="py-margin-lg border-t border-outline-variant/10">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <!-- Hero Header -->
+                <header class="mb-margin-lg">
+                    <span
+                        class="inline-block px-3 py-1 bg-primary/10 border border-primary/20 text-primary font-label-md text-label-md mb-3 rounded-lg">
+                        EXPERTISE MATRIX
+                    </span>
+                    <h2 class="font-display text-[36px] md:text-headline-lg font-bold text-on-surface mb-2">Skills &amp;
+                        Certifications</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        A comprehensive overview of my technical stack and professional validations in the software
+                        engineering landscape.
+                    </p>
+                </header>
+
+                <!-- Skills Bento Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+
+                    <!-- Languages -->
+                    <div class="md:col-span-4 glass-card p-8 rounded-xl flex flex-col gap-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-headline-md text-headline-md font-bold text-on-surface">Languages</h3>
+                            <span class="material-symbols-outlined text-primary">code</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5 mt-2">
+                            <span
+                                class="px-4 py-2 bg-surface-container-high rounded-lg font-code text-code text-primary font-bold">Java</span>
+                            <span
+                                class="px-4 py-2 bg-surface-container-high rounded-lg font-code text-code text-primary font-bold">Python</span>
+                            <span
+                                class="px-4 py-2 bg-surface-container-high rounded-lg font-code text-code text-primary font-bold">SQL
+                                Fundamentals
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend & UX -->
+                    <div class="md:col-span-8 glass-card p-8 rounded-xl flex flex-col gap-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-headline-md text-headline-md font-bold text-on-surface">Frontend &amp; UX
+                            </h3>
+                            <span class="material-symbols-outlined text-primary">layers</span>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-2">
+                            <div
+                                class="flex flex-col items-center gap-2 bg-surface-container-low p-4 rounded-lg border border-outline-variant/20 hover:border-primary/45 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">html</span>
+                                <span class="font-label-md text-label-md text-on-surface font-semibold">HTML5</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center gap-2 bg-surface-container-low p-4 rounded-lg border border-outline-variant/20 hover:border-primary/45 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">css</span>
+                                <span class="font-label-md text-label-md text-on-surface font-semibold">CSS3</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center gap-2 bg-surface-container-low p-4 rounded-lg border border-outline-variant/20 hover:border-primary/45 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">devices</span>
+                                <span
+                                    class="font-label-md text-label-md text-on-surface font-semibold">Responsive</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center gap-2 bg-surface-container-low p-4 rounded-lg border border-outline-variant/20 hover:border-primary/45 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">draw</span>
+                                <span class="font-label-md text-label-md text-on-surface font-semibold">UI/UX
+                                    (Figma)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core CS -->
+                    <div class="md:col-span-6 glass-card p-8 rounded-xl flex flex-col gap-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-headline-md text-headline-md font-bold text-on-surface">Core Computer
+                                Science</h3>
+                            <span class="material-symbols-outlined text-primary">memory</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mt-2">
+                            <div
+                                class="flex items-center gap-3 bg-surface-container-low p-3 rounded-lg border border-outline-variant/20">
+                                <span class="material-symbols-outlined text-primary text-lg">account_tree</span>
+                                <span class="font-label-md text-label-md text-on-surface font-semibold">OOP
+                                    Concepts</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 bg-surface-container-low p-3 rounded-lg border border-outline-variant/20">
+                                <span class="material-symbols-outlined text-primary text-lg">schema</span>
+                                <span class="font-label-md text-label-md text-on-surface font-semibold">Data
+                                    Structures</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 bg-surface-container-low p-3 rounded-lg border border-outline-variant/20">
+                                <span class="material-symbols-outlined text-primary text-lg">functions</span>
+                                <span
+                                    class="font-label-md text-label-md text-on-surface font-semibold">Algorithms</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 bg-surface-container-low p-3 rounded-lg border border-outline-variant/20">
+                                <span class="material-symbols-outlined text-primary text-lg">psychology</span>
+                                <span class="font-label-md text-label-md text-on-surface font-semibold">Problem
+                                    Solving</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security -->
+                    <div class="md:col-span-6 glass-card p-8 rounded-xl flex flex-col gap-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-headline-md text-headline-md font-bold text-on-surface">Security
+                                Fundamentals</h3>
+                            <span class="material-symbols-outlined text-primary">security</span>
+                        </div>
+                        <div class="flex flex-col gap-4 mt-2">
+                            <div
+                                class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg border border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface font-semibold">Cybersecurity
+                                    Basics</span>
+                                <div class="w-32 bg-surface-container-high h-2 rounded-full overflow-hidden">
+                                    <div class="bg-primary w-[85%] h-full rounded-full"></div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg border border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface font-semibold">Network
+                                    Security</span>
+                                <div class="w-32 bg-surface-container-high h-2 rounded-full overflow-hidden">
+                                    <div class="bg-primary w-[75%] h-full rounded-full"></div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg border border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface font-semibold">Threat
+                                    Detection</span>
+                                <div class="w-32 bg-surface-container-high h-2 rounded-full overflow-hidden">
+                                    <div class="bg-primary w-[65%] h-full rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI / ML Libraries -->
+                    <div class="md:col-span-12 glass-card p-8 rounded-xl flex flex-col gap-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-headline-md text-headline-md font-bold text-on-surface">AI / ML Libraries
+                            </h3>
+                            <span class="material-symbols-outlined text-primary">model_training</span>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-2">
+                            <div
+                                class="flex flex-col items-center gap-3 bg-surface-container-low p-5 rounded-lg border border-outline-variant/20 hover:border-primary/45 transition-colors group">
+                                <span
+                                    class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">table_chart</span>
+                                <div class="text-center">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-bold block">NumPy</span>
+                                    <span class="text-[11px] text-on-surface-variant font-code">Numerical
+                                        Computing</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col items-center gap-3 bg-surface-container-low p-5 rounded-lg border border-outline-variant/20 hover:border-primary/45 transition-colors group">
+                                <span
+                                    class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">dataset</span>
+                                <div class="text-center">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-bold block">Pandas</span>
+                                    <span class="text-[11px] text-on-surface-variant font-code">Data Analysis</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col items-center gap-3 bg-surface-container-low p-5 rounded-lg border border-outline-variant/20 hover:border-primary/45 transition-colors group">
+                                <span
+                                    class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">bar_chart</span>
+                                <div class="text-center">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-bold block">Matplotlib</span>
+                                    <span class="text-[11px] text-on-surface-variant font-code">Data
+                                        Visualization</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col items-center gap-3 bg-surface-container-low p-5 rounded-lg border border-outline-variant/20 hover:border-primary/45 transition-colors group">
+                                <span
+                                    class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">psychology</span>
+                                <div class="text-center">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-bold block">Scikit-learn</span>
+                                    <span class="text-[11px] text-on-surface-variant font-code">Machine Learning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI & Tools -->
+                    <div class="md:col-span-12 glass-card p-8 rounded-xl flex flex-col gap-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-headline-md text-headline-md font-bold text-on-surface">AI &amp; Developer
+                                Productivity</h3>
+                            <span class="material-symbols-outlined text-primary">construction</span>
+                        </div>
+                        <div class="flex flex-wrap gap-4 mt-2">
+                            <span
+                                class="flex items-center gap-2 px-5 py-3 bg-surface-container-low rounded-lg font-label-md text-label-md border border-primary/10 text-primary font-bold">
+                                <span class="material-symbols-outlined text-lg">auto_awesome</span> Generative AI
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-5 py-3 bg-surface-container-low rounded-lg font-label-md text-label-md border border-primary/10 text-primary font-bold">
+                                <span class="material-symbols-outlined text-lg">smart_toy</span> LLM
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-5 py-3 bg-surface-container-low rounded-lg font-label-md text-label-md border border-primary/10 text-primary font-bold">
+                                <span class="material-symbols-outlined text-lg">chat_bubble</span> Prompting Basics
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-5 py-3 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant border border-outline-variant/30 font-semibold">
+                                <span class="material-symbols-outlined text-lg">hub</span> Git &amp; GitHub
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-5 py-3 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant border border-outline-variant/30 font-semibold">
+                                <span class="material-symbols-outlined text-lg">data_object</span> VS Code
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-5 py-3 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant border border-outline-variant/30 font-semibold">
+                                <span class="material-symbols-outlined text-lg">terminal</span> Command Line
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications Section -->
+                <div class="mt-16">
+                    <div class="flex items-center gap-4 mb-margin-md">
+                        <span class="material-symbols-outlined text-primary text-3xl">verified</span>
+                        <h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">Certifications</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                        <!-- Cert 1 -->
+                        <div
+                            class="glass-card group p-6 rounded-xl relative overflow-hidden flex flex-col justify-between h-56">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all">
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <span class="material-symbols-outlined text-4xl text-primary badge-glow"
+                                    title="AI">smart_toy</span>
+                                <div>
+                                    <h4
+                                        class="font-headline-md text-[18px] md:text-headline-md font-bold text-on-surface group-hover:text-primary transition-colors">
+                                        Generative AI Mastermind
+                                    </h4>
+                                    <p class="font-label-md text-label-md text-on-surface-variant mt-1 font-semibold">
+                                        Outskill</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center border-t border-outline-variant/20 pt-3">
+                                <span class="font-code text-[11px] text-on-surface-variant/70 font-mono">ID:
+                                    GENAI-MS-01</span>
+                                <span
+                                    class="material-symbols-outlined text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                            </div>
+                        </div>
+
+                        <!-- Cert 2 -->
+                        <div
+                            class="glass-card group p-6 rounded-xl relative overflow-hidden flex flex-col justify-between h-56">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all">
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <span class="material-symbols-outlined text-4xl text-primary badge-glow"
+                                    title="Java">coffee</span>
+                                <div>
+                                    <h4
+                                        class="font-headline-md text-[18px] md:text-headline-md font-bold text-on-surface group-hover:text-primary transition-colors">
+                                        Java Programming for Beginners
+                                    </h4>
+                                    <p class="font-label-md text-label-md text-on-surface-variant mt-1 font-semibold">
+                                        Foundational Java Mastery</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center border-t border-outline-variant/20 pt-3">
+                                <span class="font-code text-[11px] text-on-surface-variant/70 font-mono">ID:
+                                    JAVA-BEG-102</span>
+                                <span
+                                    class="material-symbols-outlined text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                            </div>
+                        </div>
+
+                        <!-- Cert 3 -->
+                        <div
+                            class="glass-card group p-6 rounded-xl relative overflow-hidden flex flex-col justify-between h-56">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all">
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <span class="material-symbols-outlined text-4xl text-primary badge-glow"
+                                    title="Python">settings_input_component</span>
+                                <div>
+                                    <h4
+                                        class="font-headline-md text-[18px] md:text-headline-md font-bold text-on-surface group-hover:text-primary transition-colors">
+                                        Python Basic Programs
+                                    </h4>
+                                    <p class="font-label-md text-label-md text-on-surface-variant mt-1 font-semibold">
+                                        Programming Fundamentals</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center border-t border-outline-variant/20 pt-3">
+                                <span class="font-code text-[11px] text-on-surface-variant/70 font-mono">ID:
+                                    PY-BAS-2024</span>
+                                <span
+                                    class="material-symbols-outlined text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                            </div>
+                        </div>
+
+                        <!-- Cert 4 -->
+                        <div
+                            class="glass-card group p-6 rounded-xl relative overflow-hidden flex flex-col justify-between h-56">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all">
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <span class="material-symbols-outlined text-4xl text-primary badge-glow"
+                                    title="Cyber">shield</span>
+                                <div>
+                                    <h4
+                                        class="font-headline-md text-[18px] md:text-headline-md font-bold text-on-surface group-hover:text-primary transition-colors">
+                                        Introduction to Cybersecurity
+                                    </h4>
+                                    <p class="font-label-md text-label-md text-on-surface-variant mt-1 font-semibold">
+                                        Security Fundamentals</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center border-t border-outline-variant/20 pt-3">
+                                <span class="font-code text-[11px] text-on-surface-variant/70 font-mono">ID:
+                                    CYB-INTRO-55</span>
+                                <span
+                                    class="material-symbols-outlined text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                            </div>
+                        </div>
+
+                        <!-- Cert 5 -->
+                        <div
+                            class="glass-card group p-6 rounded-xl relative overflow-hidden flex flex-col justify-between h-56">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all">
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <span class="material-symbols-outlined text-4xl text-primary badge-glow"
+                                    title="Ethics">policy</span>
+                                <div>
+                                    <h4
+                                        class="font-headline-md text-[18px] md:text-headline-md font-bold text-on-surface group-hover:text-primary transition-colors">
+                                        Cybersecurity &amp; Digital Ethics
+                                    </h4>
+                                    <p class="font-label-md text-label-md text-on-surface-variant mt-1 font-semibold">
+                                        Compliance &amp; Best Practices</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center border-t border-outline-variant/20 pt-3">
+                                <span class="font-code text-[11px] text-on-surface-variant/70 font-mono">ID:
+                                    CYB-ETH-99</span>
+                                <span
+                                    class="material-symbols-outlined text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                            </div>
+                        </div>
+
+                        <!-- Placeholder / Call to action card -->
+                        <div
+                            class="border-2 border-dashed border-outline-variant/40 p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-colors cursor-pointer bg-surface-container-low/20 h-56">
+                            <div
+                                class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
+                                <span class="material-symbols-outlined text-primary">add</span>
+                            </div>
+                            <p class="font-label-md text-label-md text-on-surface-variant font-bold">Upcoming
+                                Certifications</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-margin-lg border-t border-outline-variant/10">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="flex flex-col gap-4 mb-margin-md">
+                    <span
+                        class="inline-block px-3 py-1 bg-primary/10 border border-primary/20 text-primary font-label-md text-label-md mb-2 rounded-lg max-w-max">
+                        GET IN TOUCH
+                    </span>
+                    <h2 class="font-display text-[36px] md:text-headline-lg font-bold text-on-background">Contact Me
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-margin-lg">
+                    <div class="flex flex-col justify-between">
+                        <div class="space-y-6">
+                            <p class="text-body-lg font-body-lg text-on-surface-variant max-w-md">
+                                Looking for a dedicated AI/ML Engineer or collaborator? I'm currently seeking full-time
+                                and Intenship opportunities in AI/ML Engineering and Software Development, and I'm open
+                                to discussing exciting projects and collaborations.
+                            </p>
+                            <div class="flex flex-col gap-4 pt-6">
+                                <a class="flex items-center gap-4 text-on-surface hover:text-primary transition-colors group"
+                                    href="mailto:abhilashkm046@gmail.com">
+                                    <span
+                                        class="material-symbols-outlined bg-surface-container p-3.5 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-all">mail</span>
+                                    <span class="font-code font-bold">abhilashkm046@gmail.com</span>
+                                </a>
+                                <a class="flex items-center gap-4 text-on-surface hover:text-primary transition-colors group"
+                                    href="tel:+918884474896">
+                                    <span
+                                        class="material-symbols-outlined bg-surface-container p-3.5 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-all">call</span>
+                                    <span class="font-code font-bold">+91 8884474896</span>
+                                </a>
+                                <div class="flex items-center gap-4 text-on-surface group">
+                                    <span
+                                        class="material-symbols-outlined bg-surface-container p-3.5 rounded-full group-hover:bg-primary/10 transition-all">location_on</span>
+                                    <span class="font-code font-bold">Bengaluru, Karnataka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Socials -->
+                        <div class="flex gap-4 mt-8 lg:mt-0">
+                            <a class="w-12 h-12 flex items-center justify-center rounded-full glass-card hover:text-primary transition-all"
+                                href="https://github.com/Abhilash-KM" target="_blank" title="GitHub">
+                                <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="w-12 h-12 flex items-center justify-center rounded-full glass-card hover:text-primary transition-all"
+                                href="https://linkedin.com/in/abhilash-k-m" target="_blank" title="LinkedIn">
+                                <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="glass-card p-6 md:p-8 rounded-xl">
+                        <form id="contact-form" class="flex flex-col gap-6">
+                            <div class="flex flex-col gap-2">
+                                <label class="font-label-md text-label-md text-on-surface font-semibold"
+                                    for="form-name">Full Name</label>
+                                <input
+                                    class="bg-surface-container-low border border-outline-variant/30 text-on-surface focus:ring-1 focus:ring-primary focus:border-primary rounded-lg py-3.5 px-4 transition-all outline-none"
+                                    id="form-name" placeholder="Abhilash KM" required type="text" />
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="font-label-md text-label-md text-on-surface font-semibold"
+                                    for="form-email">Email Address</label>
+                                <input
+                                    class="bg-surface-container-low border border-outline-variant/30 text-on-surface focus:ring-1 focus:ring-primary focus:border-primary rounded-lg py-3.5 px-4 transition-all outline-none"
+                                    id="form-email" placeholder="abhilashkm046@gmail.com" required type="email" />
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="font-label-md text-label-md text-on-surface font-semibold"
+                                    for="form-message">Message</label>
+                                <textarea
+                                    class="bg-surface-container-low border border-outline-variant/30 text-on-surface focus:ring-1 focus:ring-primary focus:border-primary rounded-lg py-3.5 px-4 transition-all outline-none resize-none"
+                                    id="form-message" placeholder="Hello! I would love to collaborate..." required
+                                    rows="4"></textarea>
+                            </div>
+                            <button
+                                class="bg-primary text-on-primary font-label-md text-label-md font-bold py-4 rounded-lg hover:shadow-[0_8px_30px_rgba(59,130,246,0.3)] active:scale-95 transition-all"
+                                type="submit">
+                                Send Message
+                            </button>
+                        </form>
+                        <div id="form-feedback" class="hidden mt-4 p-4 rounded-lg text-center font-bold"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant/20 w-full py-margin-md">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-margin-sm">
+            <div class="font-headline-md text-headline-md text-on-surface font-bold">Abhilash KM</div>
+            <p class="font-body-md text-body-md text-on-surface-variant font-medium">
+                © 2026 Abhilash KM Portfolio. All rights reserved.
+            </p>
+            <div class="flex gap-margin-sm">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors font-medium"
+                    href="https://linkedin.com/in/abhilash-k-m" target="_blank">LinkedIn</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors font-medium"
+                    href="https://github.com/Abhilash-KM" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

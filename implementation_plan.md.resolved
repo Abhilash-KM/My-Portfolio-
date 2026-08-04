@@ -1,0 +1,70 @@
+# Implementation Plan - Elite Engineer Portfolio Website
+
+This plan outlines the steps to build a high-fidelity, premium portfolio website for Abhilash KM based on the Stitch AI-native design tool output for project ID `13083743203135545972`.
+
+The site will be responsive, support both **Light** and **Dark** modes (toggled by a navbar button), and feature smooth, interactive transitions, bento grids, timelines, and animations.
+
+## Proposed Architecture
+
+We will set up a modern static site using **Vite** (vanilla JavaScript template) with **Tailwind CSS** (via custom configuration) to compile and serve the project.
+
+### Theme & Colors
+To support both Light and Dark mode seamlessly, we will define CSS custom properties (variables) in `style.css` representing the design system tokens:
+- **Light Theme**: Crisp whites (`#ffffff`), pale blue backgrounds (`#f9f9ff`), and a deep blue primary color (`#004ac6`).
+- **Dark Theme** (Obsidian/True Dark): Deep void background (`#050505` / `#101415`), elevated glassmorphic card containers (`#121212` with opacity and blur), and electric blue primary highlights (`#3b82f6`).
+
+### Component Breakdown
+1. **Navigation Bar**: Responsive fixed navbar with active link indicator, resume download button, and a theme toggle icon.
+2. **Hero Section**: Dynamic intro containing a greeting, typewriter animation cycling through "Engineer", "Student", and "Developer", key statistics (DSA problems solved, projects built), and a stylized portrait.
+3. **About & Academic Timeline**: Combines a brief intro with a vertical timeline tracing education from High School to University (Reva University).
+4. **North Star Goals**: A bento grid showing long-term goals (User-Centric Software, Mastering AI & Cyber, AI Integration).
+5. **Projects Grid**: Features interactive category filters (All, Python, Node.js, ML/AI, React) to filter project cards.
+6. **Technical Arsenal**: A grid displaying language tags, frontend skills with custom progress bars, and core CS skills.
+7. **Certifications**: Showcase for credentials with IDs and external link triggers.
+8. **Activities & Leadership**: Additional timeline illustrating organizer and academic lead roles.
+9. **GitHub Showcase & Stats**: Code contribution grid (simulating Github commits) and developer statistics.
+10. **Contact Form**: An input validation form with clean fields and a feedback submission status.
+
+---
+
+## Proposed Changes
+
+### [Vite & Tailwind Setup]
+
+#### [NEW] [package.json](file:///c:/Users/abhil/OneDrive/ドキュメント/PROJECTS/Portfolio/package.json)
+Initializes dependencies for the project including Vite.
+
+#### [NEW] [tailwind.config.js](file:///c:/Users/abhil/OneDrive/ドキュメント/PROJECTS/Portfolio/tailwind.config.js)
+Custom Tailwind configuration mapping extending colors to CSS custom properties.
+
+#### [NEW] [postcss.config.js](file:///c:/Users/abhil/OneDrive/ドキュメント/PROJECTS/Portfolio/postcss.config.js)
+Standard PostCSS configuration for compiling Tailwind.
+
+### [Core Code & Assets]
+
+#### [NEW] [index.html](file:///c:/Users/abhil/OneDrive/ドキュメント/PROJECTS/Portfolio/index.html)
+Main structure containing all components, section divs, scripts for typewriter animation, filters, mock contribution grid, and scroll tracking.
+
+#### [NEW] [style.css](file:///c:/Users/abhil/OneDrive/ドキュメント/PROJECTS/Portfolio/style.css)
+Declares design tokens, custom glassmorphism effects, scroll behaviors, animations, and typography variables.
+
+#### [NEW] [main.js](file:///c:/Users/abhil/OneDrive/ドキュメント/PROJECTS/Portfolio/main.js)
+JavaScript logic for interactive elements:
+- Light/Dark mode state management (syncing with `localStorage` and system defaults).
+- Project list filtering and dynamic animation.
+- Simulated GitHub contribution graph grid (250 colored blocks).
+- Message form submit mock simulation.
+
+---
+
+## Verification Plan
+
+### Automated Tests
+We will verify the site locally using a local development server.
+- Run `npm run dev` to launch the local Vite preview.
+- Inspect console logs for any resource errors.
+
+### Manual Verification
+- **Responsive Layout**: Resize browser window to test mobile hamburger menu, grid collapse, and spacing.
+- **Theme Toggle**: Click the theme toggle button to verify all color shifts match design specifications.
+- **Interactions**: Hover over project cards to test the Y-axis shift and grayscale-to-color image transition. Try filtering projects to verify the filter state update.
